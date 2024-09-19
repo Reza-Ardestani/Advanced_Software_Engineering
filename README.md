@@ -26,3 +26,7 @@ This is an example of how I implemented a client-side request. Specifically, it 
 
 
 Here is an example of a test I wrote to verify the functionality of retrieving a player's hand. This was accomplished using Google's GTEST library, and the tests are automatically executed via the makefile when compiling the project, alongside memory leak detection, static analysis, and style checks. The test incorporates both `ASSERT` and `EXPECT` methods to ensure functionality. If the server response code isn't 200, an error occurred, making further tests irrelevant, so I used `ASSERT`. If the returned JSON is valid, I employed `EXPECT` to confirm the results are as anticipated.
+
+
+Diagram of the project is as follows:
+![rest-test.png](imgs/REST_API_diagram.jpg)
