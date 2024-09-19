@@ -1,0 +1,2 @@
+# AOP Fibonacci
+This is the implementation of Aspect Oriented Programming in caching fibonacci results to reduce computer computation. It wraps around the function and if the funciton is previously computed it does not call the code inside the function and returns the cached result.

@@ -1,0 +1,23 @@
+#ifndef __CACHER_AH__
+#define __CACHER_AH__
+
+#include <iostream>
+#include <map>
+
+aspect Cacher {
+
+std::map<int,int> cache;
+
+advice execution("% fibonacci(...)"): around() {
+	if (cache.find(*tjp->arg<0>()) == cache.end()) {
+		tjp->proceed();
+		cache.emplace(*tjp->arg<0>(), *tjp->result());
+	} else {
+		*tjp->result() = cache.find(*tjp->arg<0>())->second;
+	}
+	
+}
+
+};
+
+#endif

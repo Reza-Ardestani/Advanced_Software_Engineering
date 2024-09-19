@@ -1,0 +1,1 @@
+This project by Matthew Ursaki and myself implements a Frequency-Based Code Completion system based off of code data in the Data folder. I have removed all data in the folder used for testing as I do not own the code, however any .cpp data should be able to be added and work just fine.

@@ -1,0 +1,20 @@
+#ifndef __PROFILER_AH__
+#define __PROFILER_AH__
+
+#include <iostream>
+
+aspect Profiler {
+
+int i = 0;
+
+  advice execution("% fibonacci(...)"): before() {
+    i++;
+  }
+
+advice execution("% main(...)"): after() {
+    std::cout << "Fibonacci was executed " << i << " times." << std::endl;
+  }
+
+};
+
+#endif
